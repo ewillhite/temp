@@ -1,0 +1,1 @@
+(function(e){e(function(){e('<span id="menu">&#9776;</span>').insertAfter(".home-icon");e("#menu").toggle(function(){e(this).next().show()},function(){e(this).next().hide()})})})(jQuery);
