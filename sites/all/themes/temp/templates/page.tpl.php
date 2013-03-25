@@ -15,6 +15,8 @@
     <div class="header-region">
       <a class="home-icon" href="/">H</a>
       <?php print render($page['header']); ?>
+      <a href="http://facebook.com" class="facebook">F</a>
+      <a href="http://twitter.com" class="twitter">T</a>
     </div>
   <?php endif; ?>
 </div>
@@ -77,7 +79,10 @@
   <?php endif; ?>
 </div><!--/page-->
 
-<footer role="contentinfo">
-  <?php print render($page['footer']); ?>
-</footer>
+<div class="footer-wrap">
+  <footer role="contentinfo">
+    <a class="cs" href="http://centresource.com">Centresource</a>
+    <?php print render($page['footer']); ?>
+  </footer>
+</div>
 

@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
     font-family: 'bebas_neueregular';
-    font-size: 4.25em; /* 68px */
+    font-size: 3.25em; /* 68px */
     line-height: 1.1471em;
     margin: 0 0 0.3824em;
 }
@@ -48,7 +48,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.125em; /* 26px */
+    font-size: 1.225em; /* 26px */
     line-height: 1em;
     margin: 0 0 1em;
 }
@@ -65,16 +65,13 @@ a {
     height: auto !important;
     width: auto !important;
 }
-/* Transition for Media Queries */
-div {
-    -moz-transition: all .1s;
-}
 /* tabs */
 ul.primary {
   height: 25px;
   li {
     padding: 0;
     a {
+      background-color: #eee;
       border-radius: 3px 3px 0 0;
       padding: 7px 7px 5px;
     }
@@ -141,10 +138,9 @@ input[type="submit"]:active {
 
 /* ------ Header ------- */
 .top-wrap {
-  background: url(../images/header-bg.jpg) no-repeat fixed center 48px black;
+  background: url(../images/header-bg2.jpg) no-repeat fixed center top black;
   padding-top: 48px;
   @include media($tablet) {
-    background-position: center 62px;
     padding-top: 62px;
   }
 }
@@ -170,6 +166,9 @@ input[type="submit"]:active {
   @include media($tablet) {
     display: none;
   }
+  &:hover {
+    color:#ccc;
+  }
 }
 
 
@@ -184,12 +183,12 @@ input[type="submit"]:active {
   position: fixed;
   width: 100%;
   padding: 5px 0;
+  z-index: 1;
 }
 .header-region {
   opacity: .9;
   @include media($tablet) {
     opacity:1;
-    text-align: center;
   }
   nav {
     background: url(../images/trans-bg.png);
@@ -201,12 +200,15 @@ input[type="submit"]:active {
     width: 100%;
     left: 0;
     top: 0;
+    float: left;
+    width: 100%;
     @include media($tablet) {
       background: none;
       border: none;
       margin: 0;
       padding: 1.5%;
       position: static;
+      width: 62%;
     }
     li {
       display: block;
@@ -218,6 +220,7 @@ input[type="submit"]:active {
         display: none;
         @include media($tablet) {
           display: inline;
+          margin-right:2%;
         }
         a {
           font-family: "icomoon";
@@ -235,7 +238,7 @@ input[type="submit"]:active {
       @include media($tablet) {
         border: none;
         display: inline;
-        margin: 0 1%;
+        margin: 0 1.4%;
         padding: 0;
         text-align: center;
       }
@@ -248,6 +251,17 @@ input[type="submit"]:active {
         }
       }
     }
+  }
+}
+.facebook, .twitter {
+  color: #fff;
+  display: none;
+  float: right;
+  font-family: "icomoon";
+  font-size: 1.4em;
+  margin: 1%;
+  @include media($tablet) {
+    display: inline;
   }
 }
 .home-icon {
@@ -290,7 +304,88 @@ input[type="submit"]:active {
   font-size: 1.4em;
   margin: 6px 0;
 }
+/* Front */
+.page-node-1 #main-content h1, .page-node-1 #main-content .node {
+  text-align: center;
+}
+.front .node {
+  h2 {
+    font-size: 1.4em;
+    color: #aaa;
+    font-weight: lighter;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 35px;
+  }
+  a {
+    display: block;
+    font-weight: normal;
+    margin: 22px 0 0 11px;
+  }
+}
+.front #main-content > div {
+  float: left;
+  width: 46%;
+  margin: 0 2%;
+}
+.front .views-field-body {
+  display: none;
+  @include media($tablet) {
+    display: block;
+  }
+}
+
 /* Connect */
 .page-node-44 .field-type-text-with-summary {
   float: right;
+}
+.page-node-44 .node .field {
+  display: none;
+  @include media($desktop) {
+    display: block;
+  }
+}
+
+/* Staff */
+.view-staff, .view-case-studies {
+  li {
+    overflow: hidden;
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+  }
+  .views-field-field-listing-photo, .views-field-field-case-study-video {
+    float: left;
+    margin-right: 2%;
+    width: 18%;
+  }
+  h2 {
+  margin-bottom: 5px;
+  }
+  h3 {
+    font-style: italic;
+    font-size: 1.1em;
+  }
+}
+
+/* Footer */
+.footer-wrap {
+  background-color:#000;
+  padding:3% 8%;
+  a, a.active {
+    color: #5f5f5f;
+    font-weight: normal;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+.cs {
+  background:url(../images/cs.png) no-repeat scroll 0 0;
+  display: block;
+  float: right;
+  height: 0;
+  overflow: hidden;
+  padding-top: 40px;
+  width: 208px;
+  margin: 15px 0;
 }

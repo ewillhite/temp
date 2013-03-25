@@ -1,4 +1,12 @@
 <?php
+
+// If Front Page
+if (drupal_is_front_page()) {
+  drupal_add_css(drupal_get_path('theme', 'temp') .'/assets/css/front.css', array('group' => CSS_THEME));
+  drupal_add_js(drupal_get_path('theme', 'temp') .'/assets/js/jquery.fitvids.min.js', array('group' => JS_THEME));
+  drupal_add_js(drupal_get_path('theme', 'temp') .'/assets/js/front.js', array('group' => JS_THEME));
+}
+
 /*
   Preprocess
 */
@@ -15,10 +23,10 @@ function temp_preprocess_page(&$vars,$hook) {
 
   //webfont
   //drupal_add_css('http://cloud.webtype.com/css/CXXXX.css','external');
-  
-  //googlefont 
+
+  //googlefont
   //  drupal_add_css('http://fonts.googleapis.com/css?family=Bree+Serif','external');
- 
+
 }
 
 function temp_preprocess_region(&$vars,$hook) {
@@ -29,11 +37,11 @@ function temp_preprocess_block(&$vars, $hook) {
   //  kpr($vars['content']);
 
   //lets look for unique block in a region $region-$blockcreator-$delta
-   $block =  
-   $vars['elements']['#block']->region .'-'. 
-   $vars['elements']['#block']->module .'-'. 
+   $block =
+   $vars['elements']['#block']->region .'-'.
+   $vars['elements']['#block']->module .'-'.
    $vars['elements']['#block']->delta;
-   
+
   // print $block .' ';
    switch ($block) {
      case 'header-menu_block-2':
@@ -43,7 +51,7 @@ function temp_preprocess_block(&$vars, $hook) {
        $vars['classes_array'][] = '';
        break;
     default:
-    
+
     break;
 
    }
@@ -85,7 +93,7 @@ function temp_preprocess_field(&$vars,$hook) {
     case 'field_FOO':
       $vars['classes_array'][] = 'classname1';
     case 'field_BAR':
-      $vars['classes_array'][] = 'classname1';    
+      $vars['classes_array'][] = 'classname1';
     default:
       break;
   }
