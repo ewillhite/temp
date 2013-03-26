@@ -60,6 +60,11 @@ a {
     text-decoration: none;
   }
 }
+/* responsive images, videos */
+img, object, video {
+  height: auto;
+  max-width: 100%;
+}
 /* Overrides for Media module to make fitVids work */
 .media-youtube-outer-wrapper, .media-youtube-preview-wrapper, .media-vimeo-outer-wrapper, .media-vimeo-preview-wrapper {
     height: auto !important;
@@ -94,6 +99,7 @@ input[type="text"], input[type="password"], input.form-text, textarea {
   border: 1px solid #ccc;
   border-radius: 3px;
   font-size: 1.2em;
+  width: 80%;
 }
 input[type="submit"] {
   background-color: $green;
@@ -324,9 +330,12 @@ input[type="submit"]:active {
   }
 }
 .front #main-content > div {
-  float: left;
-  width: 46%;
-  margin: 0 2%;
+  margin: 7%;
+  @include media($tablet) {
+    float: right;
+    width: 46%;
+    margin: 0 2%;
+  }
 }
 .front .views-field-body {
   display: none;
@@ -353,7 +362,7 @@ input[type="submit"]:active {
     padding-bottom: 14px;
     margin-bottom: 20px;
   }
-  .views-field-field-listing-photo, .views-field-field-case-study-video {
+  .views-field-field-case-study-video {
     float: left;
     margin-right: 2%;
     width: 18%;
@@ -365,6 +374,50 @@ input[type="submit"]:active {
     font-style: italic;
     font-size: 1.1em;
   }
+}
+.view-staff {
+  li {
+    border:none;
+    overflow: hidden;
+    padding-bottom: 14px;
+    margin: 0 17px;
+    float: left;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+}
+.node .field-type-image {
+  float: right;
+  margin: 0 0 2% 2%;
+}
+.group-connect {
+  a {
+    font-family: "icomoon";
+    color: #000;
+    font-size: 2em;
+    &:hover {
+      color: #aaa;
+    }
+  }
+  > div {
+  float: left;
+  margin: 4% 1% 0 0;
+  }
+}
+
+.media-youtube-video {
+  float: right;
+  margin: 0 0 1% 2%;
+  width: 50%;
+}
+.photo-grid li {
+  border:none;
+  padding-bottom:0;
+  margin-bottom: 0;
 }
 
 /* Footer */

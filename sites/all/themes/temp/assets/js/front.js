@@ -2,7 +2,7 @@
 
 $(function() {
 
-$(".front #main-content > div").fitVids();
+
 
 });
 

@@ -42,6 +42,7 @@ stylesheets[all][] = assets/css/style.css
 ;stylesheets[all][] = donteverloadmeagain.css
 
 ;-------------- JS -------------
+scripts[] = assets/js/jquery.fitvids.min.js
 scripts[] = assets/js/script.js
 
 ;-------------- Default Mothership Settings  -------------

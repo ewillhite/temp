@@ -1,1 +1,1 @@
-(function(e){e(function(){e('<span id="menu">&#9776;</span>').insertAfter(".home-icon");e("#menu").toggle(function(){e(this).next().show()},function(){e(this).next().hide()})})})(jQuery);
+(function(e){e(function(){e(".front #main-content > div, .media-youtube-video").fitVids();e('<span id="menu">&#9776;</span>').insertAfter(".home-icon");e("#menu").toggle(function(){e(this).next().show()},function(){e(this).next().hide()})})})(jQuery);

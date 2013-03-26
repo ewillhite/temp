@@ -52,6 +52,11 @@ a {
     color: #8f8f8f;
     text-decoration: none; }
 
+/* responsive images, videos */
+img, object, video {
+  height: auto;
+  max-width: 100%; }
+
 /* Overrides for Media module to make fitVids work */
 .media-youtube-outer-wrapper, .media-youtube-preview-wrapper, .media-vimeo-outer-wrapper, .media-vimeo-preview-wrapper {
   height: auto !important;
@@ -82,7 +87,8 @@ input[type="text"], input[type="password"], input.form-text, textarea {
   max-width: 400px;
   border: 1px solid #cccccc;
   border-radius: 3px;
-  font-size: 1.2em; }
+  font-size: 1.2em;
+  width: 80%; }
 
 input[type="submit"] {
   background-color: #a2cf7a;
@@ -303,9 +309,12 @@ input[type="submit"]:active {
   margin: 22px 0 0 11px; }
 
 .front #main-content > div {
-  float: left;
-  width: 46%;
-  margin: 0 2%; }
+  margin: 7%; }
+  @media screen and (min-width: 683px) {
+    .front #main-content > div {
+      float: right;
+      width: 46%;
+      margin: 0 2%; } }
 
 .front .views-field-body {
   display: none; }
@@ -328,7 +337,7 @@ input[type="submit"]:active {
   overflow: hidden;
   padding-bottom: 14px;
   margin-bottom: 20px; }
-.view-staff .views-field-field-listing-photo, .view-staff .views-field-field-case-study-video, .view-case-studies .views-field-field-listing-photo, .view-case-studies .views-field-field-case-study-video {
+.view-staff .views-field-field-case-study-video, .view-case-studies .views-field-field-case-study-video {
   float: left;
   margin-right: 2%;
   width: 18%; }
@@ -337,6 +346,41 @@ input[type="submit"]:active {
 .view-staff h3, .view-case-studies h3 {
   font-style: italic;
   font-size: 1.1em; }
+
+.view-staff li {
+  border: none;
+  overflow: hidden;
+  padding-bottom: 14px;
+  margin: 0 17px;
+  float: left; }
+.view-staff h2 {
+  font-size: 1.2em; }
+.view-staff h3 {
+  font-size: 1em; }
+
+.node .field-type-image {
+  float: right;
+  margin: 0 0 2% 2%; }
+
+.group-connect a {
+  font-family: "icomoon";
+  color: #000;
+  font-size: 2em; }
+  .group-connect a:hover {
+    color: #aaa; }
+.group-connect > div {
+  float: left;
+  margin: 4% 1% 0 0; }
+
+.media-youtube-video {
+  float: right;
+  margin: 0 0 1% 2%;
+  width: 50%; }
+
+.photo-grid li {
+  border: none;
+  padding-bottom: 0;
+  margin-bottom: 0; }
 
 /* Footer */
 .footer-wrap {
